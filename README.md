@@ -5,6 +5,8 @@ This is a unique experience, the 1st edition of the mission and is a rolling rel
 
 To begin using the Software;
 
+[Steam Link](https://steamcommunity.com/sharedfiles/filedetails/?id=2959612727)
+
 Move the file into the following directory, assuming you have the Steam version of ArmA 3
 
 `C:\Program Files (x86)\Steam\steamapps\common\Arma 3\MPMissions`
