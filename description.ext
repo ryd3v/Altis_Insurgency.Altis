@@ -1,17 +1,29 @@
+author = ryd3v;
+onLoadName = Altis Insurgency;
+onLoadMission = Intel markers in red suggest possible enemy locations. Find and destroy enemy units, Good Luck.;
+onLoadIntro = "Welcome to CANADIAN MILSIM";
+
 class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
 	maxPlayers = 64;
 };
+
+class CfgRespawnTemplates
+{
 respawn = 3;
 respawndelay = 5;
 respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition"};
-onLoadName = Altis Insurgency;
-onLoadMission = Intel markers in red suggest possible enemy locations. Find and destroy enemy units, Good Luck.;
-author = ryd3v;
+reviveMode = 1;
+};
+
+corpseManagerMode = 2;
+wreckManagerMode = 2;
+
 #include "VVS\menu.h"
+
 class cfgFunctions
 {
 	class COB
@@ -24,6 +36,7 @@ class cfgFunctions
 	};
 	#include "VVS\Functions.h"
 };
+
 class CfgSounds
 {
 	sounds[] = {};

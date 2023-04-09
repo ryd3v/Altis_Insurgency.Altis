@@ -1,9 +1,10 @@
 iedMkr=["iedMkr0","iedMkr1","iedMkr2","iedMkr3","iedMkr4","iedMkr5"];
-iedBlast=["Bo_Mk82","Rocket_03_HE_F","M_Mo_82mm_AT_LG","Bo_GBU12_LGB","Bo_GBU12_LGB_MI10","HelicopterExploSmall"];
+iedBlast=["Bo_Mk82","Rocket_03_HE_F","M_Mo_82mm_AT_LG","Bo_GBU12_LGB","Bo_GBU12_LGB_MI10", "HelicopterExploSmall"];
 iedList=["IEDLandBig_F","IEDLandSmall_F","IEDUrbanBig_F","IEDUrbanSmall_F"];
 iedJunk=["Land_Garbage_square3_F","Land_Garbage_square5_F","Land_Garbage_line_F"];
 iedNum=5;
-{_x setMarkerAlpha 0;}forEach iedMkr;
+{_x setMarkerAlpha 0;}
+forEach iedMkr;
 if(!isServer)exitWith{};
 
 iedAct={_iedObj=_this;
