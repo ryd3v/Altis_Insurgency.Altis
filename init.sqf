@@ -16,3 +16,13 @@ _handle = []execVM "scripts\earplugs.sqf"
 //Traffic,Civ's
 execVM "Engima\Traffic\Init.sqf";
 execVM "Engima\Civilians\Init.sqf";
+
+//Stamina
+if (hasinterface) then
+    {
+    waitUntil {!isnull player};
+    player enableStamina false;
+    player setCustomAimCoef 0;
+    player addEventHandler ["Respawn", {player enableStamina  false}];
+    player addEventHandler ["Respawn", {player setCustomAimCoef  0}];
+    };

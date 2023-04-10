@@ -9,15 +9,8 @@ class Header
 	minPlayers = 1;
 	maxPlayers = 64;
 };
-
-class CfgRespawnTemplates
-{
-respawn = 3;
-respawndelay = 5;
-respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition"};
 reviveMode = 1;
-};
 
 corpseManagerMode = 2;
 wreckManagerMode = 2;
