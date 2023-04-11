@@ -12,9 +12,6 @@ class Header
 respawnTemplates[] = {"MenuPosition"};
 reviveMode = 1;
 
-corpseManagerMode = 2;
-wreckManagerMode = 2;
-
 #include "VVS\menu.h"
 
 class cfgFunctions

@@ -1,17 +1,17 @@
 // Supply
-execVM "supply\supplyInit.sqf";
+execVM "scripts\supply\supplyInit.sqf";
 
 // Sling loading
-execVM "scripts\fn_advancedSlingLoadingInit.sqf";
+execVM "scripts\slingloading\fn_advancedSlingLoadingInit.sqf";
 
 //IED
-execVM "scripts\ied.sqf";
+execVM "scripts\ied\ied.sqf";
 
 //AI Spawn System
-execVM "eos\OpenMe.sqf";
+execVM "eos\spawn.sqf";
 
 //Ear Plugs
-_handle = []execVM "scripts\earplugs.sqf"
+_handle = []execVM "scripts\earplugs\earplugs.sqf"
 
 //Traffic,Civ's
 execVM "Engima\Traffic\Init.sqf";
