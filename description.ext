@@ -1,7 +1,5 @@
-author = ryd3v;
-onLoadName = Altis Insurgency;
-onLoadMission = Intel markers in red suggest possible enemy locations. Find and destroy enemy units, Good Luck.;
-onLoadIntro = "Welcome to CANADIAN MILSIM";
+respawnOnStart = -1;
+respawnTemplates[] = {"MenuPosition"};
 
 class Header
 {
@@ -10,13 +8,26 @@ class Header
 	maxPlayers = 64;
 };
 
-respawnTemplates[] = {"MenuPosition"};
-reviveMode = 1;
+author = ryd3v;
+onLoadName = Altis Insurgency;
+onLoadMission = Intel markers in red suggest possible enemy locations. Find and destroy enemy units, Good Luck.;
+onLoadIntro = "Welcome to CANADIAN MILSIM";
 
 #include "VVS\menu.h"
 
 class cfgFunctions
 {
+class BIS
+	{
+		class EscapeFromTanoa
+		{
+			file = "Functions";
+			class EfT_SniperTeam		{};
+			class EfT_SyndikatStalkers	{};
+			class EfT_PopulateCheckpoint	{};
+		};
+	};
+
 	class COB
 	{
 		class Halo
@@ -123,3 +134,15 @@ class CfgSounds
 		titles[] = {0, ""};
 	};
 };
+
+corpseManagerMode = 1; 		// Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
+corpseLimit = 24; 		// Max number of bodies which can be available at the same time. When exceeded, start deleting immediately.
+corpseRemovalMinTime = 300; 	// Minimal time in seconds a body stays in the scene (can't be removed sooner).
+corpseRemovalMaxTime = 360; 	// Maximal time in seconds after which a dead body is removed (can't stay longer).
+
+wreckManagerMode = 1; 		// Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
+wreckLimit = 8; 		// Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately.
+wreckRemovalMinTime = 300; 	// Minimal time in seconds a wreck stays in the scene (can't be removed sooner).
+wreckRemovalMaxTime = 360;	// Maximal time in seconds after which a wreck is removed (can't stay longer).
+
+minPlayerDistance = 50;	// Bodies and wrecks in this vicinity of players will not be deleted even if the timer/limit condition is met.

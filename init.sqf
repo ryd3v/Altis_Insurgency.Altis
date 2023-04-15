@@ -14,7 +14,7 @@ execVM "eos\spawn.sqf";
 _handle = []execVM "scripts\earplugs\earplugs.sqf"
 
 //Traffic,Civ's
-execVM "Engima\Traffic\Init.sqf";
+// execVM "Engima\Traffic\Init.sqf";
 execVM "Engima\Civilians\Init.sqf";
 
 //Stamina
