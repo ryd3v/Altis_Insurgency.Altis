@@ -14,6 +14,8 @@ onLoadMission = Intel markers in red suggest possible enemy locations. Find and 
 onLoadIntro = "Welcome to CANADIAN MILSIM";
 
 #include "VVS\menu.h"
+#include "bon_recruit_units\dialog\common.hpp"
+#include "bon_recruit_units\dialog\recruitment.hpp"
 
 class cfgFunctions
 {

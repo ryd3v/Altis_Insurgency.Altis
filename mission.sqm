@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=669;
+		nextID=671;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={20600.811,113.25525,10920.427};
-		dir[]={-0.65781105,-0.73268688,0.17451225};
-		up[]={-0.70818937,0.68056589,0.18787724};
-		aside[]={0.25642228,0,0.96656483};
+		pos[]={20827.617,35.302509,7235.7251};
+		dir[]={0.63696492,-0.61578572,-0.46377108};
+		up[]={0.49781331,0.78791368,-0.36245546};
+		aside[]={-0.58860648,0,-0.8084197};
 	};
 };
 binarizationWanted=0;
@@ -95,13 +95,15 @@ addons[]=
 	"A3_Structures_F_Enoch_Walls_Concrete",
 	"A3_Structures_F_Exp_Military_Fortifications",
 	"A3_Structures_F_Exp_Military_ContainerBases",
-	"A3_Structures_F_EPA_Civ_Constructions"
+	"A3_Structures_F_EPA_Civ_Constructions",
+	"A3_Props_F_Enoch_Military_Camps",
+	"A3_Props_F_Enoch_Military_Equipment"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=42;
+		items=43;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -396,6 +398,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item42
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -407,7 +416,8 @@ dlcs[]=
 	"Mark",
 	"ORANGE",
 	"Argo",
-	"Enoch"
+	"Enoch",
+	"Contact"
 };
 randomSeed=3693748;
 class ScenarioData
@@ -529,7 +539,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=404;
+		items=406;
 		class Item0
 		{
 			dataType="Marker";
@@ -19177,7 +19187,7 @@ class Mission
 			position[]={20557.875,42.084145,10952.975};
 			name="wp06a";
 			type="Empty";
-			angle=336.35007;
+			angle=336.35004;
 			id=658;
 		};
 		class Item398
@@ -19186,7 +19196,7 @@ class Mission
 			position[]={20558.455,42.416397,10958.41};
 			name="wp06b";
 			type="Empty";
-			angle=336.35007;
+			angle=336.35004;
 			id=659;
 		};
 		class Item399
@@ -19195,7 +19205,7 @@ class Mission
 			position[]={20491.691,43.799381,10940.889};
 			name="wp06c";
 			type="Empty";
-			angle=336.35007;
+			angle=336.35004;
 			id=660;
 			atlOffset=3.8146973e-006;
 		};
@@ -19205,7 +19215,7 @@ class Mission
 			position[]={20493.148,43.680351,10938.142};
 			name="wp06d";
 			type="Empty";
-			angle=336.35007;
+			angle=336.35004;
 			id=661;
 		};
 		class Item401
@@ -19221,7 +19231,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={20510.119,43.831844,10946.095};
-						angles[]={0,3.2328999,-0};
+						angles[]={0,3.2328999,0};
 					};
 					side="Empty";
 					flags=5;
@@ -19237,7 +19247,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={20520.227,43.685272,10954.143};
-						angles[]={0,1.817029,-0};
+						angles[]={0,1.817029,0};
 					};
 					side="Empty";
 					flags=5;
@@ -19262,7 +19272,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={20509.982,42.953827,10955.125};
-					angle=5.8704162;
+					angle=5.8704157;
 					class Attributes
 					{
 						text="Populate checkpoint";
@@ -19306,6 +19316,75 @@ class Mission
 			};
 			id=667;
 			atlOffset=0.040000916;
+		};
+		class Item404
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={20833.355,29.172405,7228.9473};
+				angles[]={0.0026520467,4.9272714,0.0026520467};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=669;
+			type="Land_PortableCabinet_01_closed_sand_F";
+			atlOffset=0.00039482117;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item405
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={20833.314,29.501183,7228.855};
+				angles[]={0,1.1145873,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this addAction[""<t color='#ff9900'>Recruit Infantry</t>"", ""bon_recruit_units\open_dialog.sqf""];" \n "";
+			};
+			id=670;
+			type="Land_Laptop_03_sand_F";
+			atlOffset=0.32520866;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

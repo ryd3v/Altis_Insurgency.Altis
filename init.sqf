@@ -11,7 +11,9 @@ execVM "scripts\ied\ied.sqf";
 execVM "eos\spawn.sqf";
 
 //Ear Plugs
-_handle = []execVM "scripts\earplugs\earplugs.sqf"
+_handle = []execVM "scripts\earplugs\earplugs.sqf";
+// BON
+execVM "bon_recruit_units\init.sqf";
 
 //Traffic,Civ's
 // execVM "Engima\Traffic\Init.sqf";
