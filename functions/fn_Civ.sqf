@@ -1,3 +1,4 @@
+// Copyright (c) 2023. Ryan Collins hello@ryd3v.com
 // Params
 params
 [
