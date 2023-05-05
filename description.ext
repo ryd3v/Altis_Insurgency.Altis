@@ -19,132 +19,104 @@ onLoadIntro = "Welcome to CANADIAN MILSIM";
 
 class cfgFunctions
 {
-class BIS
-	{
-		class EscapeFromTanoa
-		{
+class BIS {
+		class genInfantry {
 			file = "Functions";
-			class EfT_SniperTeam		{};
-			class EfT_SyndikatStalkers	{};
-			class EfT_PopulateCheckpoint	{};
+			class Looters {};
+			class Motorized {};
+			class Infantry {};
+			class Heli {};
+			class Tank {};
+			class Mechanized {};
+			class Civ {};
 		};
 	};
 
-	class COB
-	{
-		class Halo
-		{
+	class COB {
+		class Halo {
 			class HALO {file = "COB_HALO\functions\fn_halo.sqf";};
             class paradrop {file = "COB_HALO\functions\fn_paradrop.sqf";};
 		};
 	};
+	
 	#include "VVS\Functions.h"
 };
 
-class CfgSounds
-{
+class CfgSounds {
 	sounds[] = {};
-	class C130_exit
-	{
+	class C130_exit {
 		sound[] = {"COB_HALO\sounds\C130_exit.wss", 50, 1};
 		titles[] = {};
 	};
-	class flapping
-	{
+	class flapping {
 		sound[] = {"COB_HALO\sounds\flapping.ogg", 10, 1};
 		titles[] = {};
 	};
-	class open_chute
-	{
+	class open_chute {
 		sound[] = {"COB_HALO\sounds\open_chute.ogg", 10, 1};
 		titles[] = {};
 	};
-	class para_pilot
-	{
+	class para_pilot {
 		sound[] = {"COB_HALO\sounds\para_pilot.ogg", 10, 1};
 		titles[] = {};
 	};
-	class close_chute
-	{
+	class close_chute {
 		sound[] = {"COB_HALO\sounds\close_chute.ogg", 10, 1};
 		titles[] = {};
 	};
-	class 01
-	{
+	class 01 {
 		name = "01";
 		sound[] = {"\sound\01.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 02
-	{
+	class 02 {
 		name = "02";
 		sound[] = {"\sound\02.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 03
-	{
+	class 03 {
 		name = "03";
 		sound[] = {"\sound\03.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 04
-	{
+	class 04 {
 		name = "04";
 		sound[] = {"\sound\04.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 05
-	{
+	class 05 {
 		name = "05";
 		sound[] = {"\sound\05.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 06
-	{
+	class 06 {
 		name = "06";
 		sound[] = {"\sound\06.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 07
-	{
+	class 07 {
 		name = "07";
 		sound[] = {"\sound\07.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 08
-	{
+	class 08 {
 		name = "08";
 		sound[] = {"\sound\08.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 09
-	{
+	class 09 {
 		name = "09";
 		sound[] = {"\sound\09.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class 099
-	{
+	class 099 {
 		name = "099";
 		sound[] = {"\sound\099.ogg", 0.8, 1};
 		titles[] = {1, ""};
 	};
-	class NoSound
-	{
+	class NoSound {
 		name = "NoSound";
 		sound[] = {"", 0, 1};
 		titles[] = {0, ""};
 	};
 };
-
-corpseManagerMode = 1; 		// Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
-corpseLimit = 24; 		// Max number of bodies which can be available at the same time. When exceeded, start deleting immediately.
-corpseRemovalMinTime = 300; 	// Minimal time in seconds a body stays in the scene (can't be removed sooner).
-corpseRemovalMaxTime = 360; 	// Maximal time in seconds after which a dead body is removed (can't stay longer).
-
-wreckManagerMode = 1; 		// Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
-wreckLimit = 8; 		// Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately.
-wreckRemovalMinTime = 300; 	// Minimal time in seconds a wreck stays in the scene (can't be removed sooner).
-wreckRemovalMaxTime = 360;	// Maximal time in seconds after which a wreck is removed (can't stay longer).
-
-minPlayerDistance = 50;	// Bodies and wrecks in this vicinity of players will not be deleted even if the timer/limit condition is met.
